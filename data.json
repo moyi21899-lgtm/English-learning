@@ -160,34 +160,62 @@
               "collapsed": false
             }
           ],
+          "collapsed": true
+        }
+      ],
+      "translationGroups": [
+        {
+          "name": "Text A",
+          "paragraphs": [],
           "collapsed": false
+        },
+        {
+          "name": "短翻译",
+          "paragraphs": [
+            {
+              "en": "With the rapid advancement of science and technology, the learning landscape is undergoing a subtle revolution. Students can now easily access a wealth of interdisciplinary information through the Internet, which has undoubtedly broadened their horizons. Furthermore, online education platforms provide a more flexible way of learning, allowing students to customize their learning according to their own pace and interests. The convergence of technology and education not only democratizes access to information but also transforms the learning experience itself. Virtual classrooms, multimedia resources, and interactive tools have become an important part of modern education. These technological advancements cater to diverse learning styles and make education more inclusive and effective. As we navigate this era of technological innovation, the synergy (协同作用) between science, technology, and learning continues to influence how we acquire and apply knowledge in an increasingly connected world.",
+              "zh": "随着科学技术的迅猛发展，学习领域正在悄然发生一场微妙的革命。学生现在可以通过互联网轻松获取丰富的跨学科信息，这无疑开阔了他们的视野。此外，在线教育平台提供了更灵活的学习方式，允许学生根据自己的步调和兴趣定制学习计划。技术与教育的融合不仅实现了信息获取的民主化，而且还改变了学习体验本身。虚拟教室、多媒体资源、互动工具已成为现代教育的重要组成部分。这些技术进步满足了多样化的学习方式，使教育更具包容性和有效性。在我们探索科技创新时代的过程中，科学、技术和学习之间的协同作用继续影响着我们在日益互联的世界中获取和应用知识的方式。",
+              "collapsed": false
+            },
+            {
+              "en": "近年来，随着互联网技术的迅猛发展，互联网经济已成为一个热门话题。以电子商务为代表的互联网经济已成为中国经济发展的重要引擎（driving force）。我国政府提出了“互联网+”的概念，以推动互联网与医疗、交通、教育、金融、公共服务等领域的结合。这将为互联网经济的发展提供更多发展机遇和更广阔的发展空间。",
+              "zh": "In recent years, with the rapid development of Internet technology, the Internet economy has become a popular topic. Represented by e-commerce, the Internet economy has become a strong driving force for the development of the Chinese economy. Our government proposes the concept of \"Internet Plus\", aiming to push for the integration of the Internet with other industries, such as health care, transportation, education, finance, and public services. This will create more opportunities and broader prospects for the development of the Internet economy.",
+              "collapsed": false
+            }
+          ],
+          "collapsed": true
         }
       ]
     },
     {
       "name": "Unit 2",
       "translations": [],
-      "quizSets": []
+      "quizSets": [],
+      "translationGroups": []
     },
     {
       "name": "Unit 3",
       "translations": [],
-      "quizSets": []
+      "quizSets": [],
+      "translationGroups": []
     },
     {
       "name": "Unit 4",
       "translations": [],
-      "quizSets": []
+      "quizSets": [],
+      "translationGroups": []
     },
     {
       "name": "Unit 5",
       "translations": [],
-      "quizSets": []
+      "quizSets": [],
+      "translationGroups": []
     },
     {
       "name": "Unit 6",
       "translations": [],
-      "quizSets": []
+      "quizSets": [],
+      "translationGroups": []
     }
   ]
 }
