@@ -166,7 +166,68 @@
       "translationGroups": [
         {
           "name": "Text A",
-          "paragraphs": [],
+          "paragraphs": [
+            {
+              "en": "On a quiet Saturday afternoon, Paul and his wife Maria are sitting at home reading their favorite books. Opposite to where they sit are their two sons: 15-year-old Jason and 12-year-old Jack, absorbed in playing chess. What's the scenario here? The family calls it their \"offline day\". From Friday night through Sunday evening, there are no video games, no computers, and no cell phones. ",
+              "zh": " 一个安静的周六下午，保罗和妻子玛丽亚坐在家里阅读自己最喜爱的书籍。 正对着他们坐的地方，两个儿子——十五岁的贾森和十二岁的杰克——正全神贯注地下棋。 这是一幕什么样的场景？ 他们一家人称之为“离线日”。 从周五夜里到周日傍晚，大家都不玩电子游戏、电脑和手机。 ",
+              "collapsed": true
+            },
+            {
+              "en": " In our \"always on\" lives, such a scenario of family convention seems gone. Are we too immersed in the brilliance of the digital world? Perhaps. We cannot seem to resist the lure of our cell phones, even when we are in the company of others. Apparently, we have sacrificed conversation for connection. ",
+              "zh": "在我们“一直在线”的生活里，像这样在家庭中常见的一幕似乎不存在了。 我们是不是过分沉浸在精彩的数字世界里？ 也许是的。 就算身边有同伴，我们似乎也无法抵挡手机的诱惑。 显然，为了保持网上互联，我们牺牲了当面交谈。 ",
+              "collapsed": true
+            },
+            {
+              "en": "At home, families sit together, texting, and reading emails. At work, executives text during board meetings. We also text when we're on dates. Walking through a college library or the campus of a high-tech company, one sees an identical scenario: People are together, but each of them is in their own bubble, furiously connected to keyboards and tiny touch screens. The little devices most of us carry around are so powerful that they change not only what we do but also who we are. ",
+              "zh": "在家里，家人们坐在一起，却在发信息，阅读邮件。 在工作中，高管们一边开董事会，一边发信息。 约会之时，我们也会发信息。 走进大学图书馆或者高科技公司园区，我们看到的都是相同的一幕：人们虽然聚到一起，但每个人都封闭在自己的世界里，在键盘和小小的触摸屏上忙个不停。 我们大多数人随身携带的这些小小设备威力巨大，不但改变了我们的行为，也改变了我们自身。 ",
+              "collapsed": true
+            },
+            {
+              "en": "It's true we've already become accustomed to a new way of being \"alone together\". Technology-enabled, we are able to be with one another, and also elsewhere, connected to wherever we want to be. We've been used to the idea of being in a tribe of one, loyal to our own party. In the silence of connection, we are comforted by being in touch with \"invisible\" friends and significant others, not too close, nor too far, just right. \n",
+              "zh": "确实，我们已经适应了一种新的“群体性孤独”。 有科技的加持，我们彼此在一起的同时也在神游别处，与任何想去的地方互连。 我们习惯了待在单人部落里，忠于我们自己。 在网上互联的沉默中，我们与“看不见”的朋友及其他重要人士保持着不近不远、恰到好处的联系，这让我们感到舒适。 ",
+              "collapsed": true
+            },
+            {
+              "en": " A senior partner at a law firm describes vividly a scene in his office. Every morning, young associates would first lay out their suite of technologies: laptops, tablets, and multiple phones. Then they would put their earphones on. \"Big ones. Like pilots. They have converted their desks into cockpits,\" he said. With the young lawyers sitting in their cockpits, the office becomes quiet, a quiet that does not ask to be broken. They have completely plunged into their virtual world. ",
+              "zh": "某律师事务所的高级合伙人生动地描述了他办公室里的场景。 每天早晨，年轻的同事首先摆好自己的电子产品多件套：笔记本电脑、平板电脑和多部手机。 接着戴上耳机。 “就是那种大耳机，跟飞行员一样。他们把办公桌变成了飞机驾驶舱。”他说道。 年轻律师们都坐在各自的驾驶舱，办公室一片寂静，静得都没人想去打破。 他们已经完全投入自己的虚拟世界里了。 \n",
+              "collapsed": true
+            },
+            {
+              "en": "As we can see, there is no limit to time and space in this digital world. Connection can be anytime and anywhere. Gradually, we've picked up a habit of deletion – wiping out rich human relationships. The move from conversation to connection, for example, is part of this. In fact, online connection is often a deceptive illusion in which we cheat ourselves, assuming we're not alone. Worse, over time we'll stop caring and forget there is a difference between online connection and face-to-face conversation. \n",
+              "zh": "正如我们所见，在这个数字世界里，时间和空间是没有限制的。 随时随地都可以在线联系。 渐渐地，我们已经养成了删除的习惯——摒弃丰富多彩的人际关系。 例如，从当面交谈转向线上互联就是这种习惯的一部分。 实际上，线上的联系常常是迷惑人的假象，我们不过自欺欺人地认为我们并不孤单。 更糟的是，时间一久，我们将不会在意甚至是忘记线上联系与当面交谈是有区别的。 ",
+              "collapsed": true
+            },
+            {
+              "en": "We are tempted to think that our little \"sips\" of online connection add up to a big swallow of real conversation. No, they don't. Even though all of these sips have their places – in politics, commerce, romance, and friendship, I would claim, no matter how valuable they are, it's impossible for them to substitute for real conversation, where people exchange ideas and share viewpoints dynamically. \n",
+              "zh": " 我们禁不住这样想：少量多次的“小酌”般的在线联系加起来相当于一次豪饮似的真正的见面交谈吧。 不，不是的。 尽管所有的小酌都有其作用——政治上的、商务上的、爱情方面的、友谊方面的，但我想说的是，不管它们多么有用，都不可能代替真正的见面交谈，因为在见面交谈中，人们是在互动中交流看法，分享观点的。 \n",
+              "collapsed": true
+            },
+            {
+              "en": "Yes, connecting in sips may work for gathering discrete bits of information, or for saying \"I am thinking about you\", or even for saying \"I love you\", but it's far from the adequacy of communication when it comes to understanding and knowing one another. Real conversation, on the other hand, is a more informative process, in which we're more caring and observant. We hesitate and pause and go silent, and we reveal ourselves to one another through tones and nuances. ",
+              "zh": "是的，少量多次小酌般的线上联系也许对收集少量分散的信息管用，或者适用于说一声“我正想着你”，甚至是说一声“我爱你”，但要达到双方理解和相知，这种交流是远远不够的。 而真正的见面交谈的过程信息更为充分，我们更能为他人着想，并更会察言观色。 我们会犹豫，会停顿，还会沉默不语，通过语气和细微差异把自己展现给对方。",
+              "collapsed": true
+            },
+            {
+              "en": "While communicating on our digital devices, we unconsciously raise our expectations as well. As we increase the volume and velocity of online connection, we start to expect acceleration – faster answers. We ask one another simpler questions; we dumb down our communication, even on the most important matters. Face-to-face conversation, by contrast, unfolds slowly, so it teaches us patience. ",
+              "zh": "在数字设备上交流的时候，我们还会不自觉地提高自己的期待。 在增加在线联系量和速率的同时，我们开始期望得到增速——更快的回复。 我们互相问一些更简单的问题，使交流变得肤浅，甚至在最重要的事情上也是这样。 相比之下，面对面的交谈会慢慢展开，于是教会我们耐心。 ",
+              "collapsed": true
+            },
+            {
+              "en": "In addition, our move from conversation means diminished opportunities to learn skills of self-reflection. These days, social media continually asks us what's \"on our mind\", but we have little motivation to say something truly self-reflective. Imagine how hard it is to do something with thousands of online friends! It is through the conversation with trusted others that we learn to converse with ourselves – to be honest with ourselves. ",
+              "zh": "此外，我们脱离面对面交谈也意味着学习自我反思技能的机会减少了。 如今，社交媒体频频问我们“心里在想什么”，但我们很难有心思去谈一些真正反思自我的东西。 想想在有成百上千在线朋友的情况下，做一件事情得有多困难！ 我们通过与值得信任的他人谈话来学会与自己对话——对自己坦诚相待。 ",
+              "collapsed": true
+            },
+            {
+              "en": "I'm not a critic, but I am a partisan for conversation. To make room for it, I see some first steps. At home, we can create \"sacred\" spaces for conversation while doing domestic chores: the kitchen, the dining room. We can make our cars a place free of little devices. We can be a consultant to our children through the demonstration of the value of conversation. At work, we can do the same thing. Employees asked for casual Fridays; managers may \"collaborate\" and introduce conversational Thursdays. ",
+              "zh": "我不是一个批评者，但却是当面交谈的坚定支持者。 为了给交谈营造空间，我有一些初步策略。 在家里，我们做家务活时就可以为交谈创造“神圣”的场所：厨房和餐厅。 我们可以在自家的车上禁用电子设备。 我们可以充当孩子们的顾问，给他们展示面对面交谈的重要意义。 在工作中，我们也可以做同样的事情。 过去员工要求有休闲星期五，那么现在管理层也可以“通力合作”引入交谈星期四。 ",
+              "collapsed": true
+            },
+            {
+              "en": "Although an \"offline day\" may be unbearable for tech enthusiasts who need to alter their habits, experts say it is beneficial to assess both the merits and burdens of digital technology. Let's take some time away from the beeps and rings to evaluate our relationship with technology. Try to make some changes. At the beginning, it might be hard, but after a few months when a habit forms, we'll begin to realize we have already gained a lot from it. So, look up, look at one another, and let's start a conversation. ",
+              "zh": "尽管对需要改变习惯的科技迷来说，让他们“离线一天”可能无法忍受，但专家指出评估数字技术带来的好处和负担是有帮助的。 让我们留些时间远离哔哔声和铃声来审视自己和科技的关系。 试着改变一下。 一开始也许会很艰难，但到几个月后养成习惯了，我们会开始认识到这样做已经使我们受益匪浅了。 所以，抬起头，看着对方，开始交谈吧。 ",
+              "collapsed": true
+            }
+          ],
           "collapsed": false
         },
         {
