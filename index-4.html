@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>英语期末复习 · 手动题库版</title>
+<style>
+:root{--bg:#f5f6fa;--card:#fff;--text:#222;--muted:#777;--line:#ddd;--accent:#5b6ee1;--soft:#f8f9fc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:13px 16px}
+.top{max-width:1180px;margin:auto;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+h1{font-size:20px;margin:0 18px 0 0}
+button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 12px;cursor:pointer}
+button:hover{background:#f0f2ff}
+.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.unit-tabs{max-width:1180px;margin:10px auto 0;display:flex;gap:7px;overflow-x:auto}
+.tab{min-width:72px}.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+main{max-width:1180px;margin:20px auto;padding:0 15px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:18px}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+h2{font-size:18px;margin:0}
+h3{font-size:15px;margin:0}
+.hint{font-size:13px;color:var(--muted);margin:7px 0 12px}
+.translation-item,.translation-group,.quiz-set{border:1px solid var(--line);border-radius:11px;margin:10px 0;overflow:hidden}
+.item-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;background:var(--soft)}
+.item-actions{display:flex;gap:6px;flex-wrap:wrap}
+.translation-group-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 12px;background:var(--soft)}
+.translation-group-body{padding:0 12px 10px}
+.translation-paragraph{border:1px solid #e6e6e6;border-radius:10px;margin:10px 0;overflow:hidden;background:#fff}
+.translation-paragraph-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 11px;background:#fafafa;border-bottom:1px solid #eee}
+.translation-paragraph.collapsed .translation-body{display:none}
+.translation-body{display:grid;grid-template-columns:1fr 1fr}
+.translation-body textarea{width:100%;min-height:105px;border:0;padding:12px;resize:vertical;font:inherit;outline:0}
+.translation-body textarea+textarea{border-left:1px solid var(--line)}
+.translation-item.collapsed .translation-body,.translation-group.collapsed .translation-group-body,.quiz-set.collapsed .quiz-body{display:none}
+.toggle::after{content:"收缩"}.collapsed .toggle::after{content:"展开"}
+.quiz-body{padding:0 13px 10px}
+.question{border:1px solid #e6e6e6;border-radius:10px;margin:10px 0;overflow:hidden;background:#fff}.question.collapsed .question-body{display:none}.question-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px;background:#fafafa;border-bottom:1px solid #eee}.question-body{padding:12px}.answer{margin-top:10px;padding:8px 10px;border-radius:8px;background:#fff4f6;color:#d51f45;font-weight:700}.big-group{border:1px solid var(--line);border-radius:12px;margin:12px 0;overflow:hidden}.big-group.collapsed .big-group-body{display:none}.big-group-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 13px;background:var(--soft)}.big-group-body{padding:0 13px 10px}
+.question:first-child{border-top:0}
+.qtext{font-weight:600;line-height:1.55}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.option{padding:9px 11px;background:#fafafa;border:1px solid #e6e6e6;border-radius:8px}
+.editor{width:100%;min-height:130px;border:1px solid var(--line);border-radius:9px;padding:10px;font:inherit;resize:vertical}
+.input-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.field label{display:block;font-size:13px;color:var(--muted);margin-bottom:5px}
+.field input,.field select{width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+.empty{text-align:center;color:var(--muted);padding:20px}
+.status{font-size:13px;color:var(--muted);margin-top:8px}
+@media(max-width:700px){
+ .translation-body,.options,.input-row{grid-template-columns:1fr}
+ .translation-body textarea+textarea{border-left:0;border-top:1px solid var(--line)}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="top">
+<h1>英语期末复习</h1>
+<button class="primary" onclick="shuffleAll()">打乱全部单元题目</button>
+<button class="primary" onclick="saveAll()">保存</button>
+<button onclick="cloudLoad()">从 GitHub 同步</button>
+<button onclick="cloudSave()">保存到 GitHub</button>
+<button onclick="showCloudSettings()">GitHub 设置</button>
+<button onclick="exportData()">导出</button>
+<button onclick="document.getElementById('file').click()">导入</button>
+<input id="file" type="file" accept=".json" hidden onchange="importData(event)">
+</div>
+<div class="unit-tabs" id="tabs"></div>
+</header>
+
+<main>
+<section>
+<div class="section-head">
+<h2 id="unitTitle">Unit 1 · 翻译</h2>
+<div class="controls">
+<button onclick="addTranslationGroup()">＋添加翻译组</button>
+<button onclick="collapseAllTranslations()">全部收缩</button>
+<button onclick="expandAllTranslations()">全部展开</button>
+</div>
+</div>
+<p class="hint">英译汉和汉译英都可以放在这里。每个翻译组可以保存一篇长文章，每个段落独立保存英译汉内容，可自由添加、删除、收缩和展开。手机和平板可通过 GitHub 同步同一份题库。</p>
+<div id="translations"></div>
+</section>
+
+<section>
+<div class="section-head">
+<h2 id="questionTitle">Unit 1 · 选择题</h2>
+<div class="controls">
+<button onclick="addQuizSet()">＋添加大组</button>
+<button onclick="shuffleCurrent()">一键打乱本单元</button>
+</div>
+</div>
+<p class="hint">一个 Unit 可以有多个大组，例如“一、单项选择题”“二、课后练习”。每个大组里的一道题都是独立的小题卡片，可以单独收缩或删除。</p>
+<div id="quizSets"></div>
+<div id="emptyQuestions" class="empty">当前单元还没有大组，点击“＋添加大组”即可。</div>
+</section>
+
+<section id="cloudSection" style="display:none">
+<h2>GitHub 同步设置</h2>
+<p class="hint">只用于你自己的复习工具。Token 只保存在当前设备浏览器中，不会写入题库文件。请使用 GitHub Fine-grained Personal Access Token，并只给这个仓库的 Contents 读写权限。</p>
+<div class="input-row">
+<div class="field"><label>GitHub 用户名</label><input id="ghOwner" value="moyi21899-lgtm"></div>
+<div class="field"><label>仓库名</label><input id="ghRepo" value="English-learning"></div>
+</div>
+<div class="field" style="margin-top:10px"><label>GitHub Token</label><input id="ghToken" type="password" placeholder="github_pat_……"></div>
+<div class="controls"><button class="primary" onclick="saveCloudSettings()">保存设置</button><button onclick="clearCloudSettings()">清除本机 Token</button></div>
+<div id="cloudStatus" class="status"></div>
+</section>
+
+<section>
+<h2>手动批量录入选择题</h2>
+<p class="hint">先选择一个大组，再把已经整理好的题目粘贴进来。程序会自动识别题号、A/B/C/D 四个选项和“答案”。一个大组里，每一道题都会单独显示成一个小题卡片。</p>
+<div class="input-row">
+<div class="field"><label>加入大组</label><select id="manualSet"></select></div>
+<div></div>
+</div>
+<textarea class="editor" id="manualInput" style="margin-top:10px" placeholder="例如：
+1. 下列不是国家类奖助学金的主要类型的选项为（ ）
+A. 国家励志奖学金
+B. 山东省政府励志奖学金
+C. 国家助学金
+D. 国家政府助学金
+答案：4
+
+2. 下列不是国家类奖助学金的基本申请条件（ ）
+A. 热爱社会主义祖国，拥护中国共产党的领导
+B. 诚实守信，道德品质优良
+C. 遵守宪法和法律，遵守学校规章制度
+D. 学习怠慢，各方面综合表现一般
+答案：4"></textarea>
+<div class="controls"><button class="primary" onclick="parseQuestions()">自动识别并加入大组</button></div>
+<div id="parseStatus" class="status"></div>
+</section>
+</main>
+
+<script>
+const KEY="englishFinalReviewV3";
+let data=JSON.parse(localStorage.getItem(KEY)||"null")||{
+ units:Array.from({length:6},(_,i)=>({name:"Unit "+(i+1),translations:[],quizSets:[]}))
+};
+let current=0;
+
+function normalizeData(){
+ data.units=data.units||[];
+ while(data.units.length<6)data.units.push({name:"Unit "+(data.units.length+1),translations:[],quizSets:[]});
+ data.units=data.units.slice(0,6);
+ data.units.forEach(u=>{
+   u.translations=u.translations||[];
+   if(!u.translationGroups){
+     u.translationGroups=(u.translations||[]).map((x,i)=>({name:x.title||("Text "+String.fromCharCode(65+i)),paragraphs:[{en:x.en||"",zh:x.zh||"",collapsed:false}],collapsed:false}));
+     if(!u.translationGroups.length) u.translationGroups=[];
+   }
+   u.translationGroups.forEach(g=>{
+     g.paragraphs=g.paragraphs||[];
+     if(g.collapsed===undefined)g.collapsed=false;
+     g.paragraphs.forEach(p=>{if(p.collapsed===undefined)p.collapsed=false;});
+   });
+   if(!u.quizSets){
+     u.quizSets=[{name:"大题组 1",questions:u.questions||[],collapsed:false}];
+     delete u.questions;
+   }
+   u.quizSets.forEach(s=>{
+     s.questions=s.questions||[];
+     if(s.collapsed===undefined)s.collapsed=false;
+     s.questions.forEach(q=>{
+       if(q.collapsed===undefined)q.collapsed=false;
+       q.options=(q.options||[]).slice(0,4).map(o=>({text:String(typeof o==='string'?o:o.text||'')}));
+       q.answer=normalizeAnswer(q.answer);
+     });
+   });
+ });
+}
+function normalizeAnswer(v){
+ const x=String(v??'').trim().toUpperCase().replace(/[答案：:\s]/g,'');
+ if(/^[1-4]$/.test(x))return 'ABCD'[Number(x)-1];
+ return /^[ABCD]$/.test(x)?x:'';
+}
+normalizeData();
+
+function save(){localStorage.setItem(KEY,JSON.stringify(data))}
+function saveAll(){save();alert("已保存到本机")}
+
+const GH_KEY="englishFinalReviewGitHub";
+function getCloudSettings(){
+ try{return JSON.parse(localStorage.getItem(GH_KEY)||"null")||{owner:"moyi21899-lgtm",repo:"English-learning",token:""}}
+ catch{return {owner:"moyi21899-lgtm",repo:"English-learning",token:""}}
+}
+function showCloudSettings(){
+ const s=getCloudSettings();
+ document.getElementById("cloudSection").style.display="block";
+ document.getElementById("ghOwner").value=s.owner||"moyi21899-lgtm";
+ document.getElementById("ghRepo").value=s.repo||"English-learning";
+ document.getElementById("ghToken").value=s.token||"";
+ document.getElementById("cloudSection").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function saveCloudSettings(){
+ const owner=document.getElementById("ghOwner").value.trim();
+ const repo=document.getElementById("ghRepo").value.trim();
+ const token=document.getElementById("ghToken").value.trim();
+ if(!owner||!repo||!token){alert("请填写 GitHub 用户名、仓库名和 Token。" );return}
+ localStorage.setItem(GH_KEY,JSON.stringify({owner,repo,token}));
+ document.getElementById("cloudStatus").textContent="设置已保存到本机浏览器。";
+}
+function clearCloudSettings(){localStorage.removeItem(GH_KEY);document.getElementById("ghToken").value="";document.getElementById("cloudStatus").textContent="本机 Token 已清除。";}
+function ghHeaders(token){return {"Accept":"application/vnd.github+json","Authorization":"Bearer "+token,"X-GitHub-Api-Version":"2022-11-28","Content-Type":"application/json"}}
+function cloudError(status,body){
+ if(status===401)return "GitHub Token 无效或已过期。";
+ if(status===403)return "GitHub 拒绝访问。请检查 Token 是否给了这个仓库的 Contents 读写权限。";
+ if(status===404)return "找不到仓库或 Token 无权访问它。请检查用户名、仓库名和 Token 权限。";
+ return "GitHub 请求失败（"+status+"）："+body;
+}
+async function cloudLoad(){
+ const s=getCloudSettings();
+ if(!s.token){showCloudSettings();alert("先在 GitHub 设置里填写 Token。这个 Token 只保存在当前设备。" );return}
+ const status=document.getElementById("cloudStatus");
+ status.textContent="正在从 GitHub 读取题库……";
+ try{
+  const r=await fetch(`https://api.github.com/repos/${encodeURIComponent(s.owner)}/${encodeURIComponent(s.repo)}/contents/data.json`,{headers:ghHeaders(s.token)});
+  if(r.status===404){status.textContent="GitHub 里还没有 data.json。先在当前设备保存一次即可创建。";return}
+  const body=await r.text();
+  if(!r.ok)throw new Error(cloudError(r.status,body));
+  const obj=JSON.parse(body); const json=JSON.parse(decodeURIComponent(escape(atob(obj.content.replace(/\s/g,"")))));
+  data=json;normalizeData();current=0;save();render();
+  localStorage.setItem("englishFinalReviewGitHubSha",obj.sha);
+  status.textContent="已从 GitHub 同步最新题库。";
+ }catch(e){status.textContent=e.message||String(e);alert(status.textContent)}
+}
+async function cloudSave(){
+ const s=getCloudSettings();
+ if(!s.token){showCloudSettings();alert("先在 GitHub 设置里填写 Token。这个 Token 只保存在当前设备。" );return}
+ const status=document.getElementById("cloudStatus");
+ status.textContent="正在保存到 GitHub……";
+ try{
+  const url=`https://api.github.com/repos/${encodeURIComponent(s.owner)}/${encodeURIComponent(s.repo)}/contents/data.json`;
+  const get=await fetch(url,{headers:ghHeaders(s.token)});
+  let sha=null;
+  if(get.ok){const old=await get.json();sha=old.sha}
+  else if(get.status!==404){const b=await get.text();throw new Error(cloudError(get.status,b))}
+  const content=unescape(encodeURIComponent(JSON.stringify(data,null,2)));
+  const encoded=btoa(content);
+  const payload={message:"Update English review data",content:encoded};
+  if(sha)payload.sha=sha;
+  const put=await fetch(url,{method:"PUT",headers:ghHeaders(s.token),body:JSON.stringify(payload)});
+  const b=await put.text();
+  if(!put.ok)throw new Error(cloudError(put.status,b));
+  const result=JSON.parse(b); if(result.content?.sha)localStorage.setItem("englishFinalReviewGitHubSha",result.content.sha);
+  save(); status.textContent="已保存到 GitHub。手机和平板都可以从这里同步。";
+ }catch(e){status.textContent=e.message||String(e);alert(status.textContent)}
+}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
+
+function renderTabs(){
+ const t=document.getElementById("tabs");t.innerHTML="";
+ data.units.forEach((u,i)=>{
+   const b=document.createElement("button");b.className="tab "+(i===current?"active":"");
+   b.textContent="Unit "+(i+1);b.onclick=()=>{current=i;render()};t.appendChild(b);
+ });
+}
+function render(){
+ renderTabs();
+ const u=data.units[current];
+ document.getElementById("unitTitle").textContent=u.name+" · 翻译";
+ document.getElementById("questionTitle").textContent=u.name+" · 选择题";
+ renderTranslations();renderQuizSets();renderSetSelects();
+}
+
+function renderTranslations(){
+ const box=document.getElementById("translations");box.innerHTML="";
+ const groups=data.units[current].translationGroups||[];
+ if(!groups.length){box.innerHTML='<div class="empty">当前单元还没有翻译组，点击“＋添加翻译组”即可。</div>';return}
+ groups.forEach((g,gi)=>{
+   const group=document.createElement("div");
+   group.className="translation-group"+(g.collapsed?" collapsed":"");
+   group.innerHTML=`<div class="translation-group-head"><b>${esc(g.name||("Text "+String.fromCharCode(65+gi)))}（${g.paragraphs.length}段）</b>
+   <div class="item-actions"><button class="toggle" onclick="toggleTranslationGroup(${gi})"></button>
+   <button onclick="addTranslationParagraph(${gi})">＋添加段落</button><button onclick="renameTranslationGroup(${gi})">重命名</button><button onclick="deleteTranslationGroup(${gi})">删除</button></div></div>`;
+   const body=document.createElement("div");body.className="translation-group-body";
+   if(!g.paragraphs.length) body.innerHTML='<div class="empty">这个翻译组还没有段落，点击“＋添加段落”。</div>';
+   g.paragraphs.forEach((x,pi)=>{
+     const item=document.createElement("div");
+     item.className="translation-paragraph"+(x.collapsed?" collapsed":"");
+     item.innerHTML=`<div class="translation-paragraph-head"><b>第${pi+1}段</b>
+       <div class="item-actions"><button onclick="toggleTranslationParagraph(${gi},${pi})">${x.collapsed?"展开":"收缩"}</button><button onclick="deleteTranslationParagraph(${gi},${pi})">删除</button></div></div>
+       <div class="translation-body">
+       <textarea placeholder="英文原文……" oninput="editTranslationParagraph(${gi},${pi},'en',this.value)">${esc(x.en)}</textarea>
+       <textarea placeholder="中文翻译……" oninput="editTranslationParagraph(${gi},${pi},'zh',this.value)">${esc(x.zh)}</textarea>
+       </div>`;
+     body.appendChild(item);
+   });
+   group.appendChild(body);box.appendChild(group);
+ });
+}
+function addTranslationGroup(){
+ let title=prompt("翻译组名称：","Text "+String.fromCharCode(65+(data.units[current].translationGroups||[]).length));
+ if(title===null)return;
+ data.units[current].translationGroups=data.units[current].translationGroups||[];
+ data.units[current].translationGroups.push({name:title||"未命名翻译组",paragraphs:[],collapsed:false});save();renderTranslations();
+}
+function addTranslationParagraph(gi){
+ const g=data.units[current].translationGroups[gi];
+ g.paragraphs.push({en:"",zh:"",collapsed:false});save();renderTranslations();
+}
+function editTranslationParagraph(gi,pi,k,v){data.units[current].translationGroups[gi].paragraphs[pi][k]=v;save()}
+function toggleTranslationGroup(gi){data.units[current].translationGroups[gi].collapsed=!data.units[current].translationGroups[gi].collapsed;save();renderTranslations()}
+function renameTranslationGroup(gi){let v=prompt("新的翻译组名称：",data.units[current].translationGroups[gi].name);if(v!==null){data.units[current].translationGroups[gi].name=v||"未命名翻译组";save();renderTranslations()}}
+function deleteTranslationGroup(gi){if(confirm("确定删除这个翻译组及其中全部段落吗？")){data.units[current].translationGroups.splice(gi,1);save();renderTranslations()}}
+function toggleTranslationParagraph(gi,pi){const p=data.units[current].translationGroups[gi].paragraphs[pi];p.collapsed=!p.collapsed;save();renderTranslations()}
+function deleteTranslationParagraph(gi,pi){if(confirm("确定删除这一段翻译吗？")){data.units[current].translationGroups[gi].paragraphs.splice(pi,1);save();renderTranslations()}}
+function collapseAllTranslations(){(data.units[current].translationGroups||[]).forEach(g=>{g.collapsed=true});save();renderTranslations()}
+function expandAllTranslations(){(data.units[current].translationGroups||[]).forEach(g=>{g.collapsed=false});save();renderTranslations()}
+
+function renderQuizSets(){
+ const box=document.getElementById("quizSets");box.innerHTML="";
+ const sets=data.units[current].quizSets;
+ document.getElementById("emptyQuestions").style.display=sets.length?"none":"block";
+ sets.forEach((s,si)=>{
+   const wrap=document.createElement("div");wrap.className="big-group"+(s.collapsed?" collapsed":"");
+   const head=document.createElement("div");head.className="big-group-head";
+   head.innerHTML=`<b>${esc(s.name)}（${s.questions.length}题）</b>
+   <div class="item-actions"><button class="toggle" onclick="toggleSet(${si})"></button>
+   <button onclick="renameSet(${si})">重命名</button><button onclick="shuffleSet(${si})">打乱本大组</button><button onclick="deleteSet(${si})">删除</button></div>`;
+   wrap.appendChild(head);
+   const body=document.createElement("div");body.className="big-group-body";
+   s.questions.forEach((q,qi)=>{
+     const d=document.createElement("div");d.className="question"+(q.collapsed?" collapsed":"");
+     const opts=q.options||[];
+     const ans=normalizeAnswer(q.answer);
+     d.innerHTML=`<div class="question-head"><b>第${qi+1}题</b>
+       <div class="item-actions"><button onclick="toggleQuestion(${si},${qi})">${q.collapsed?"展开":"收缩"}</button><button onclick="deleteQuestion(${si},${qi})">删除</button></div></div>
+       <div class="question-body"><div class="qtext">${esc(q.text)}</div>
+       <div class="options">${opts.slice(0,4).map((o,j)=>`<div class="option"><b>${"ABCD"[j]}.</b> ${esc(o.text)}</div>`).join("")}</div>
+       ${ans?`<div class="answer">答案：${ans}</div>`:""}</div>`;
+     body.appendChild(d);
+   });
+   wrap.appendChild(body);box.appendChild(wrap);
+ });
+}
+function addQuizSet(){
+ let name=prompt("大组名称：","大题组 "+(data.units[current].quizSets.length+1));
+ if(name===null)return;
+ data.units[current].quizSets.push({name:name||"未命名大组",questions:[],collapsed:false});save();render();
+}
+function toggleSet(i){data.units[current].quizSets[i].collapsed=!data.units[current].quizSets[i].collapsed;save();renderQuizSets()}
+function renameSet(i){let v=prompt("新的大组名称：",data.units[current].quizSets[i].name);if(v!==null){data.units[current].quizSets[i].name=v||"未命名大组";save();render()}}
+function deleteSet(i){
+ if(!confirm("确定删除这个大组及其中全部题目吗？"))return;
+ data.units[current].quizSets.splice(i,1);save();render();
+}
+function shuffleSet(i){data.units[current].quizSets[i].questions=shuffle(data.units[current].quizSets[i].questions);save();renderQuizSets()}
+function shuffleCurrent(){data.units[current].quizSets.forEach(s=>s.questions=shuffle(s.questions));save();renderQuizSets()}
+function shuffleAll(){
+ data.units.forEach(u=>u.quizSets.forEach(s=>s.questions=shuffle(s.questions)));
+ save();render();alert("已打乱全部 6 个 Unit 的题目顺序（题目仍保留在原来的 Unit 和大组中）。");
+}
+function toggleQuestion(si,qi){
+ const q=data.units[current].quizSets[si].questions[qi];q.collapsed=!q.collapsed;save();renderQuizSets();
+}
+function deleteQuestion(si,qi){
+ if(!confirm("确定删除这道题吗？"))return;
+ data.units[current].quizSets[si].questions.splice(qi,1);save();renderQuizSets();
+}
+
+function renderSetSelects(){
+ const el=document.getElementById("manualSet");el.innerHTML="";
+ data.units[current].quizSets.forEach((s,i)=>{
+   const o=document.createElement("option");o.value=i;o.textContent=s.name;el.appendChild(o);
+ });
+}
+
+function parseQuestions(){
+ const raw=document.getElementById("manualInput").value.trim();
+ const status=document.getElementById("parseStatus");
+ if(!raw){status.textContent="请先粘贴题目。";return}
+ const si=Number(document.getElementById("manualSet").value);
+ if(!data.units[current].quizSets[si]){alert("请先添加一个大组。");return}
+
+ const blocks=raw.split(/(?=^\s*\d+\s*[\.、)）]\s*)/m).map(x=>x.trim()).filter(Boolean);
+ const added=[];
+ for(const block of blocks){
+   const optionRe=/(?:^|\n)\s*([ABCD])\s*[\.、:：)）]\s*/gi;
+   const matches=[]; let m;
+   while((m=optionRe.exec(block))!==null)matches.push({letter:m[1].toUpperCase(),index:m.index,start:m.index+m[0].length});
+   if(matches.length<4){
+     const inlineRe=/(?:^|\s)([ABCD])\s*[\.、:：)）]\s*/gi;
+     matches.length=0;
+     while((m=inlineRe.exec(block))!==null)matches.push({letter:m[1].toUpperCase(),index:m.index,start:m.index+m[0].length});
+   }
+   if(matches.length<4)continue;
+   // 只取按 A/B/C/D 顺序出现的前四个选项，避免答案行里的字母干扰。
+   const ordered=[];
+   for(const x of matches){
+     if(x.letter==="ABCD"[ordered.length])ordered.push(x);
+     if(ordered.length===4)break;
+   }
+   if(ordered.length<4)continue;
+   const opts=[];
+   for(let i=0;i<4;i++){
+     const a=ordered[i], b=ordered[i+1];
+     const end=b?b.index:block.length;
+     let text=block.slice(a.start,end).trim();
+     text=text.replace(/\s*答案\s*[：:]?\s*[1-4ABCD].*$/is,"").trim();
+     opts.push({text});
+   }
+   if(opts.some(o=>!o.text))continue;
+   let text=block.slice(0,ordered[0].index).replace(/^\d+\s*[\.、)）]\s*/,"").trim();
+   if(!text)continue;
+   const answerMatch=block.match(/答案\s*[：:]?\s*([1-4ABCD])/i);
+   const answer=answerMatch?normalizeAnswer(answerMatch[1]):"";
+   added.push({text,options:opts,answer,collapsed:false});
+ }
+ if(!added.length){
+   status.textContent="没有识别到完整题目。请按“题号 + 题干 + A/B/C/D + 答案”的格式粘贴。";
+   return;
+ }
+ data.units[current].quizSets[si].questions.push(...added);
+ document.getElementById("manualInput").value="";
+ save();renderQuizSets();renderSetSelects();
+ status.textContent=`已识别 ${added.length} 道题，并加入“${data.units[current].quizSets[si].name}”。`;
+}
+
+function exportData(){
+ save();
+ const safe=JSON.parse(JSON.stringify(data));
+ const blob=new Blob([JSON.stringify(safe,null,2)],{type:"application/json"});
+ const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="英语期末复习数据.json";a.click();URL.revokeObjectURL(a.href);
+}
+function importData(e){
+ const f=e.target.files[0];if(!f)return;
+ const r=new FileReader();
+ r.onload=()=>{
+  try{data=JSON.parse(r.result);normalizeData();current=0;save();render();alert("导入成功")}
+  catch{alert("文件格式不正确")}
+ };
+ r.readAsText(f);
+}
+render();
+</script>
+</body>
+</html>
