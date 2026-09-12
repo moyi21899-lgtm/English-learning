@@ -163,7 +163,7 @@
           "collapsed": true
         },
         {
-          "name": "选词填空",
+          "name": "Words in use",
           "questions": [
             {
               "text": "Younger children may have problems paying attention in class, and would easily get ______.",
@@ -300,6 +300,202 @@
             }
           ],
           "collapsed": true
+        },
+        {
+          "name": "Banked cloze",
+          "questions": [
+            {
+              "text": "Through online interactions, young people can share ideas, acquire information, and be exposed to many opportunities out there. Social media gives them the avenue to make new friends and allows them to ______ contact with their old friends.",
+              "options": [
+                {
+                  "text": "maintain"
+                },
+                {
+                  "text": "anticipate"
+                },
+                {
+                  "text": "attain"
+                },
+                {
+                  "text": "remove"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "However, too much social media also leads to addiction. We are quite familiar with the ______ of people sitting next to each other, not talking, but just staring at their phones.",
+              "options": [
+                {
+                  "text": "succession"
+                },
+                {
+                  "text": "scenario"
+                },
+                {
+                  "text": "approval"
+                },
+                {
+                  "text": "obsession"
+                }
+              ],
+              "answer": "B",
+              "collapsed": false
+            },
+            {
+              "text": "Young people are more likely to be ______ in social media rather than spend time with their families and friends.",
+              "options": [
+                {
+                  "text": "furnished"
+                },
+                {
+                  "text": "diminished"
+                },
+                {
+                  "text": "immersed"
+                },
+                {
+                  "text": "anticipated"
+                }
+              ],
+              "answer": "C",
+              "collapsed": false
+            },
+            {
+              "text": "With too many distractions, they cannot fully ______ on their tasks.",
+              "options": [
+                {
+                  "text": "concentrate"
+                },
+                {
+                  "text": "attain"
+                },
+                {
+                  "text": "maintain"
+                },
+                {
+                  "text": "furnish"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "Social media also leads to ______. Some people are crazy about likes and comments and they will do anything to get them on a daily basis.",
+              "options": [
+                {
+                  "text": "mutual"
+                },
+                {
+                  "text": "removal"
+                },
+                {
+                  "text": "obsession"
+                },
+                {
+                  "text": "succession"
+                }
+              ],
+              "answer": "C",
+              "collapsed": false
+            },
+            {
+              "text": "Everything they do, they want to post on social media to get some form of ______ from strangers.",
+              "options": [
+                {
+                  "text": "approval"
+                },
+                {
+                  "text": "lure"
+                },
+                {
+                  "text": "scenario"
+                },
+                {
+                  "text": "removal"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "Since they cannot get the same popularity in real life as they do in social media, they yield to the ______ of social networks.",
+              "options": [
+                {
+                  "text": "continual"
+                },
+                {
+                  "text": "approval"
+                },
+                {
+                  "text": "lure"
+                },
+                {
+                  "text": "succession"
+                }
+              ],
+              "answer": "C",
+              "collapsed": false
+            },
+            {
+              "text": "However, many of them live in ______ fear of being less popular.",
+              "options": [
+                {
+                  "text": "mutual"
+                },
+                {
+                  "text": "continual"
+                },
+                {
+                  "text": "immersed"
+                },
+                {
+                  "text": "furnished"
+                }
+              ],
+              "answer": "B",
+              "collapsed": false
+            },
+            {
+              "text": "Everything falls apart when their popularity really ______, and they may even get into serious psychological problems.",
+              "options": [
+                {
+                  "text": "attains"
+                },
+                {
+                  "text": "furnishes"
+                },
+                {
+                  "text": "diminishes"
+                },
+                {
+                  "text": "anticipates"
+                }
+              ],
+              "answer": "C",
+              "collapsed": false
+            },
+            {
+              "text": "The creators of social networks perhaps did not ______ that their creations would bring these problems.",
+              "options": [
+                {
+                  "text": "anticipate"
+                },
+                {
+                  "text": "maintain"
+                },
+                {
+                  "text": "concentrate"
+                },
+                {
+                  "text": "attain"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            }
+          ],
+          "collapsed": true
         }
       ],
       "translationGroups": [
@@ -367,7 +563,7 @@
               "collapsed": true
             }
           ],
-          "collapsed": false
+          "collapsed": true
         },
         {
           "name": "短翻译",
