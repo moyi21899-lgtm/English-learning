@@ -1,0 +1,193 @@
+{
+  "units": [
+    {
+      "name": "Unit 1",
+      "translations": [],
+      "quizSets": [
+        {
+          "name": " Expressions in use",
+          "questions": [
+            {
+              "text": "The cheerful guy who wore virtual reality glasses __________ the virtual world.",
+              "options": [
+                {
+                  "text": "plunged into"
+                },
+                {
+                  "text": "stepped back from"
+                },
+                {
+                  "text": "broke away from"
+                },
+                {
+                  "text": "held on to"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "It has been the tradition in China that elderly people live in a familiar environment, preferably __________ their children.",
+              "options": [
+                {
+                  "text": "in the company of"
+                },
+                {
+                  "text": "in place of"
+                },
+                {
+                  "text": "in charge of"
+                },
+                {
+                  "text": "in memory of"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "Chinese isn’t a subject that can be __________ in a month, and you can’t accomplish your goal of mastering the language unless you work at it for years.",
+              "options": [
+                {
+                  "text": "picked up"
+                },
+                {
+                  "text": "given up"
+                },
+                {
+                  "text": "put off"
+                },
+                {
+                  "text": "turned down"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "He __________ the map across the table and took another look at it.",
+              "options": [
+                {
+                  "text": "laid out"
+                },
+                {
+                  "text": "folded up"
+                },
+                {
+                  "text": "threw away"
+                },
+                {
+                  "text": "put up"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "The live music, the wild dancing, and the amazing lights all __________ an exciting theatrical experience.",
+              "options": [
+                {
+                  "text": "add up to"
+                },
+                {
+                  "text": "come down to"
+                },
+                {
+                  "text": "look forward to"
+                },
+                {
+                  "text": "get away with"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "Since space is limited, we sometimes have to say goodbye to old things in order to __________ new items.",
+              "options": [
+                {
+                  "text": "make room for"
+                },
+                {
+                  "text": "take advantage of"
+                },
+                {
+                  "text": "keep pace with"
+                },
+                {
+                  "text": "get rid of"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "The magazine has a reputation for being very thorough, although critics claim that it has been __________ in recent years to cater to the mass market.",
+              "options": [
+                {
+                  "text": "dumbed down"
+                },
+                {
+                  "text": "dressed up"
+                },
+                {
+                  "text": "shown off"
+                },
+                {
+                  "text": "brought up"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "This marks another historic step toward __________ the absolute poverty that has plagued the nation for centuries.",
+              "options": [
+                {
+                  "text": "wiping out"
+                },
+                {
+                  "text": "carrying out"
+                },
+                {
+                  "text": "pointing out"
+                },
+                {
+                  "text": "figuring out"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            }
+          ],
+          "collapsed": false
+        }
+      ]
+    },
+    {
+      "name": "Unit 2",
+      "translations": [],
+      "quizSets": []
+    },
+    {
+      "name": "Unit 3",
+      "translations": [],
+      "quizSets": []
+    },
+    {
+      "name": "Unit 4",
+      "translations": [],
+      "quizSets": []
+    },
+    {
+      "name": "Unit 5",
+      "translations": [],
+      "quizSets": []
+    },
+    {
+      "name": "Unit 6",
+      "translations": [],
+      "quizSets": []
+    }
+  ]
+}
