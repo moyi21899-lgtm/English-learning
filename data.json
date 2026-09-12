@@ -5,25 +5,44 @@
       "translations": [],
       "quizSets": [
         {
-          "name": " Expressions in use",
+          "name": "Expressions in use",
           "questions": [
             {
-              "text": "The cheerful guy who wore virtual reality glasses __________ the virtual world.",
+              "text": "He __________ the map across the table and took another look at it.",
               "options": [
                 {
-                  "text": "plunged into"
+                  "text": "put off"
                 },
                 {
-                  "text": "stepped back from"
+                  "text": "turned down"
                 },
                 {
-                  "text": "broke away from"
+                  "text": "laid out"
                 },
                 {
-                  "text": "held on to"
+                  "text": "brought about"
                 }
               ],
-              "answer": "A",
+              "answer": "C",
+              "collapsed": false
+            },
+            {
+              "text": "Chinese isn’t a subject that can be __________ in a month, and you can’t accomplish your goal of mastering the language unless you work at it for years.",
+              "options": [
+                {
+                  "text": "taken over"
+                },
+                {
+                  "text": "picked up"
+                },
+                {
+                  "text": "given away"
+                },
+                {
+                  "text": "carried out"
+                }
+              ],
+              "answer": "B",
               "collapsed": false
             },
             {
@@ -33,55 +52,36 @@
                   "text": "in the company of"
                 },
                 {
-                  "text": "in place of"
+                  "text": "in favor of"
                 },
                 {
                   "text": "in charge of"
                 },
                 {
-                  "text": "in memory of"
+                  "text": "in place of"
                 }
               ],
               "answer": "A",
               "collapsed": false
             },
             {
-              "text": "Chinese isn’t a subject that can be __________ in a month, and you can’t accomplish your goal of mastering the language unless you work at it for years.",
+              "text": "The cheerful guy who wore virtual reality glasses __________ the virtual world.",
               "options": [
                 {
-                  "text": "picked up"
+                  "text": "turned off"
                 },
                 {
-                  "text": "given up"
+                  "text": "plunged into"
                 },
                 {
-                  "text": "put off"
+                  "text": "came across"
                 },
                 {
-                  "text": "turned down"
+                  "text": "broke away from"
                 }
               ],
-              "answer": "A",
-              "collapsed": false
-            },
-            {
-              "text": "He __________ the map across the table and took another look at it.",
-              "options": [
-                {
-                  "text": "laid out"
-                },
-                {
-                  "text": "folded up"
-                },
-                {
-                  "text": "threw away"
-                },
-                {
-                  "text": "put up"
-                }
-              ],
-              "answer": "A",
-              "collapsed": false
+              "answer": "B",
+              "collapsed": true
             },
             {
               "text": "The live music, the wild dancing, and the amazing lights all __________ an exciting theatrical experience.",
@@ -90,51 +90,13 @@
                   "text": "add up to"
                 },
                 {
-                  "text": "come down to"
+                  "text": "result from"
                 },
                 {
-                  "text": "look forward to"
+                  "text": "depend on"
                 },
                 {
-                  "text": "get away with"
-                }
-              ],
-              "answer": "A",
-              "collapsed": false
-            },
-            {
-              "text": "Since space is limited, we sometimes have to say goodbye to old things in order to __________ new items.",
-              "options": [
-                {
-                  "text": "make room for"
-                },
-                {
-                  "text": "take advantage of"
-                },
-                {
-                  "text": "keep pace with"
-                },
-                {
-                  "text": "get rid of"
-                }
-              ],
-              "answer": "A",
-              "collapsed": false
-            },
-            {
-              "text": "The magazine has a reputation for being very thorough, although critics claim that it has been __________ in recent years to cater to the mass market.",
-              "options": [
-                {
-                  "text": "dumbed down"
-                },
-                {
-                  "text": "dressed up"
-                },
-                {
-                  "text": "shown off"
-                },
-                {
-                  "text": "brought up"
+                  "text": "belong to"
                 }
               ],
               "answer": "A",
@@ -147,13 +109,190 @@
                   "text": "wiping out"
                 },
                 {
-                  "text": "carrying out"
+                  "text": "putting off"
                 },
                 {
-                  "text": "pointing out"
+                  "text": "taking on"
                 },
                 {
-                  "text": "figuring out"
+                  "text": "bringing in"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "Since space is limited, we sometimes have to say goodbye to old things in order to __________ new items.",
+              "options": [
+                {
+                  "text": "take advantage of"
+                },
+                {
+                  "text": "make room for"
+                },
+                {
+                  "text": "keep up with"
+                },
+                {
+                  "text": "get rid of"
+                }
+              ],
+              "answer": "B",
+              "collapsed": false
+            },
+            {
+              "text": "The magazine has a reputation for being very thorough, although critics claim that it has been __________ in recent years to cater to the mass market.",
+              "options": [
+                {
+                  "text": "brought up"
+                },
+                {
+                  "text": "broken down"
+                },
+                {
+                  "text": "dumbed down"
+                },
+                {
+                  "text": "taken in"
+                }
+              ],
+              "answer": "C",
+              "collapsed": false
+            }
+          ],
+          "collapsed": true
+        },
+        {
+          "name": "选词填空",
+          "questions": [
+            {
+              "text": "Younger children may have problems paying attention in class, and would easily get ______.",
+              "options": [
+                {
+                  "text": "retired"
+                },
+                {
+                  "text": "distracted"
+                },
+                {
+                  "text": "dominant"
+                },
+                {
+                  "text": "reliant"
+                }
+              ],
+              "answer": "B",
+              "collapsed": false
+            },
+            {
+              "text": "Investors need ______ that the risk taken by the company is acceptable to them.",
+              "options": [
+                {
+                  "text": "assurance"
+                },
+                {
+                  "text": "clearance"
+                },
+                {
+                  "text": "admittance"
+                },
+                {
+                  "text": "dominance"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "Too much ______ on teachers telling them what to do next might hinder the development of children’s independent thinking.",
+              "options": [
+                {
+                  "text": "assurance"
+                },
+                {
+                  "text": "dominance"
+                },
+                {
+                  "text": "reliance"
+                },
+                {
+                  "text": "admittance"
+                }
+              ],
+              "answer": "C",
+              "collapsed": false
+            },
+            {
+              "text": "The competitive entrance examination for ______ to this university was such that hundreds of applicants were turned down each year.",
+              "options": [
+                {
+                  "text": "clearance"
+                },
+                {
+                  "text": "reliance"
+                },
+                {
+                  "text": "admittance"
+                },
+                {
+                  "text": "assurance"
+                }
+              ],
+              "answer": "C",
+              "collapsed": false
+            },
+            {
+              "text": "My dad is ______ and decides to devote his leisure time and energies to his passion: painting.",
+              "options": [
+                {
+                  "text": "distracted"
+                },
+                {
+                  "text": "retired"
+                },
+                {
+                  "text": "dominant"
+                },
+                {
+                  "text": "reliant"
+                }
+              ],
+              "answer": "B",
+              "collapsed": false
+            },
+            {
+              "text": "The careless ______ of trees could cause economic damage through degradation (退化) of the soil.",
+              "options": [
+                {
+                  "text": "reliance"
+                },
+                {
+                  "text": "clearance"
+                },
+                {
+                  "text": "assurance"
+                },
+                {
+                  "text": "admittance"
+                }
+              ],
+              "answer": "B",
+              "collapsed": false
+            },
+            {
+              "text": "The ______ of the Internet and mobile devices means that anything that can be used effectively with them is likely to be a success.",
+              "options": [
+                {
+                  "text": "dominance"
+                },
+                {
+                  "text": "assurance"
+                },
+                {
+                  "text": "clearance"
+                },
+                {
+                  "text": "admittance"
                 }
               ],
               "answer": "A",
@@ -236,7 +375,7 @@
             {
               "en": "With the rapid advancement of science and technology, the learning landscape is undergoing a subtle revolution. Students can now easily access a wealth of interdisciplinary information through the Internet, which has undoubtedly broadened their horizons. Furthermore, online education platforms provide a more flexible way of learning, allowing students to customize their learning according to their own pace and interests. The convergence of technology and education not only democratizes access to information but also transforms the learning experience itself. Virtual classrooms, multimedia resources, and interactive tools have become an important part of modern education. These technological advancements cater to diverse learning styles and make education more inclusive and effective. As we navigate this era of technological innovation, the synergy (协同作用) between science, technology, and learning continues to influence how we acquire and apply knowledge in an increasingly connected world.",
               "zh": "随着科学技术的迅猛发展，学习领域正在悄然发生一场微妙的革命。学生现在可以通过互联网轻松获取丰富的跨学科信息，这无疑开阔了他们的视野。此外，在线教育平台提供了更灵活的学习方式，允许学生根据自己的步调和兴趣定制学习计划。技术与教育的融合不仅实现了信息获取的民主化，而且还改变了学习体验本身。虚拟教室、多媒体资源、互动工具已成为现代教育的重要组成部分。这些技术进步满足了多样化的学习方式，使教育更具包容性和有效性。在我们探索科技创新时代的过程中，科学、技术和学习之间的协同作用继续影响着我们在日益互联的世界中获取和应用知识的方式。",
-              "collapsed": false
+              "collapsed": true
             },
             {
               "en": "近年来，随着互联网技术的迅猛发展，互联网经济已成为一个热门话题。以电子商务为代表的互联网经济已成为中国经济发展的重要引擎（driving force）。我国政府提出了“互联网+”的概念，以推动互联网与医疗、交通、教育、金融、公共服务等领域的结合。这将为互联网经济的发展提供更多发展机遇和更广阔的发展空间。",
