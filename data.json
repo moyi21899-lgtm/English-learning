@@ -163,7 +163,7 @@
           "collapsed": true
         },
         {
-          "name": "Words in use",
+          "name": "Words in use 4",
           "questions": [
             {
               "text": "Younger children may have problems paying attention in class, and would easily get ______.",
@@ -496,6 +496,202 @@
             }
           ],
           "collapsed": true
+        },
+        {
+          "name": "Words in use 3",
+          "questions": [
+            {
+              "text": "He entered the film industry, taking small roles and writing ______ for a famous film company.",
+              "options": [
+                {
+                  "text": "scenarios"
+                },
+                {
+                  "text": "substitutes"
+                },
+                {
+                  "text": "velocity"
+                },
+                {
+                  "text": "patterns"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "In doing translation, one should not ______ the meaning of the original to suit one's own taste.",
+              "options": [
+                {
+                  "text": "assess"
+                },
+                {
+                  "text": "alter"
+                },
+                {
+                  "text": "immerse"
+                },
+                {
+                  "text": "substitute"
+                }
+              ],
+              "answer": "B",
+              "collapsed": false
+            },
+            {
+              "text": "Without warning, there was a(n) ______ storm and the waves swept over the boat.",
+              "options": [
+                {
+                  "text": "sacred"
+                },
+                {
+                  "text": "discrete"
+                },
+                {
+                  "text": "furious"
+                },
+                {
+                  "text": "flexible"
+                }
+              ],
+              "answer": "C",
+              "collapsed": false
+            },
+            {
+              "text": "Doctors consider it their ______ duty to protect and save the lives of their patients.",
+              "options": [
+                {
+                  "text": "sacred"
+                },
+                {
+                  "text": "furious"
+                },
+                {
+                  "text": "immersed"
+                },
+                {
+                  "text": "discrete"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "The question was how to maintain that kind of ______ for a vehicle that weighed considerably more than 3,300 pounds.",
+              "options": [
+                {
+                  "text": "scenario"
+                },
+                {
+                  "text": "velocity"
+                },
+                {
+                  "text": "collaboration"
+                },
+                {
+                  "text": "substitute"
+                }
+              ],
+              "answer": "B",
+              "collapsed": false
+            },
+            {
+              "text": "They are able to take ______ ideas, thoughts, and generalizations and weave them into meaningful patterns.",
+              "options": [
+                {
+                  "text": "furious"
+                },
+                {
+                  "text": "sacred"
+                },
+                {
+                  "text": "discrete"
+                },
+                {
+                  "text": "immersed"
+                }
+              ],
+              "answer": "C",
+              "collapsed": false
+            },
+            {
+              "text": "They needed someone to ______ for a pianist who couldn't make it, and her professor recommended her.",
+              "options": [
+                {
+                  "text": "assess"
+                },
+                {
+                  "text": "collaborate"
+                },
+                {
+                  "text": "substitute"
+                },
+                {
+                  "text": "alter"
+                }
+              ],
+              "answer": "C",
+              "collapsed": false
+            },
+            {
+              "text": "Let's embrace Chinese culture this summer and get ______ in the richness of traditional Chinese music and dance!",
+              "options": [
+                {
+                  "text": "immersed"
+                },
+                {
+                  "text": "altered"
+                },
+                {
+                  "text": "assessed"
+                },
+                {
+                  "text": "substituted"
+                }
+              ],
+              "answer": "A",
+              "collapsed": false
+            },
+            {
+              "text": "The Chinese scientific community will ______ with their international peers in frontier science research.",
+              "options": [
+                {
+                  "text": "assess"
+                },
+                {
+                  "text": "collaborate"
+                },
+                {
+                  "text": "substitute"
+                },
+                {
+                  "text": "immerse"
+                }
+              ],
+              "answer": "B",
+              "collapsed": false
+            },
+            {
+              "text": "At the end of the semester, students will be ______ on their proficiency in writing and speaking in English.",
+              "options": [
+                {
+                  "text": "altered"
+                },
+                {
+                  "text": "immersed"
+                },
+                {
+                  "text": "collaborated"
+                },
+                {
+                  "text": "assessed"
+                }
+              ],
+              "answer": "D",
+              "collapsed": false
+            }
+          ],
+          "collapsed": true
         }
       ],
       "translationGroups": [
@@ -534,7 +730,7 @@
             },
             {
               "en": "We are tempted to think that our little \"sips\" of online connection add up to a big swallow of real conversation. No, they don't. Even though all of these sips have their places – in politics, commerce, romance, and friendship, I would claim, no matter how valuable they are, it's impossible for them to substitute for real conversation, where people exchange ideas and share viewpoints dynamically. \n",
-              "zh": " 我们禁不住这样想：少量多次的“小酌”般的在线联系加起来相当于一次豪饮似的真正的见面交谈吧。 不，不是的。 尽管所有的小酌都有其作用——政治上的、商务上的、爱情方面的、友谊方面的，但我想说的是，不管它们多么有用，都不可能代替真正的见面交谈，因为在见面交谈中，人们是在互动中交流看法，分享观点的。 \n",
+              "zh": " 我们禁不住这样想：少量多次的“小酌”般的在线联系加起来相当于一次豪饮似的真正的见面交谈吧。 不，不是的。 尽管所有的小酌都有其作用——政治上的、商务上的、爱情方面的、友谊方面的，但我想说的是，不管它们多么有用，都不可能代替真正的见面交谈，因为在见面交谈中，人们是在互动中交流看法，分享观点的。 ",
               "collapsed": true
             },
             {
@@ -544,7 +740,7 @@
             },
             {
               "en": "While communicating on our digital devices, we unconsciously raise our expectations as well. As we increase the volume and velocity of online connection, we start to expect acceleration – faster answers. We ask one another simpler questions; we dumb down our communication, even on the most important matters. Face-to-face conversation, by contrast, unfolds slowly, so it teaches us patience. ",
-              "zh": "在数字设备上交流的时候，我们还会不自觉地提高自己的期待。 在增加在线联系量和速率的同时，我们开始期望得到增速——更快的回复。 我们互相问一些更简单的问题，使交流变得肤浅，甚至在最重要的事情上也是这样。 相比之下，面对面的交谈会慢慢展开，于是教会我们耐心。 ",
+              "zh": "在数字设备上交流的时候，我们还会不自觉地提高自己的期待。 在增加在线联系量和速率的同时，我们开始期望得到增速——更快的回复。 我们互相问一些更简单的问题，使交流变得肤浅，甚至在最重要的事情上也是这样。 相比之下，面对面的交谈会慢慢展开，培养我们的耐心。 ",
               "collapsed": true
             },
             {
@@ -576,7 +772,7 @@
             {
               "en": "近年来，随着互联网技术的迅猛发展，互联网经济已成为一个热门话题。以电子商务为代表的互联网经济已成为中国经济发展的重要引擎（driving force）。我国政府提出了“互联网+”的概念，以推动互联网与医疗、交通、教育、金融、公共服务等领域的结合。这将为互联网经济的发展提供更多发展机遇和更广阔的发展空间。",
               "zh": "In recent years, with the rapid development of Internet technology, the Internet economy has become a popular topic. Represented by e-commerce, the Internet economy has become a strong driving force for the development of the Chinese economy. Our government proposes the concept of \"Internet Plus\", aiming to push for the integration of the Internet with other industries, such as health care, transportation, education, finance, and public services. This will create more opportunities and broader prospects for the development of the Internet economy.",
-              "collapsed": false
+              "collapsed": true
             }
           ],
           "collapsed": true
